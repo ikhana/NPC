@@ -6,6 +6,7 @@ import MovingStrip from './components/MovingStrip';
 import ComicPanel from './components/ComicPanel';
 import npcImage from "../src/assets/post1.jpg";
 import npcVideo from "./assets/gif.mp4"
+import Footer from './components/Footer';
 
 const AppContainer = styled.div`
   background-color: #007bff;
@@ -152,7 +153,7 @@ function App() {
         backgroundColor="#007bff"
         textColor="#f9f9f9"
       />
-      {/* You might want to add a Footer component here */}
+    <Footer/>
     </AppContainer>
   );
 }
