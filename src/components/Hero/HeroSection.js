@@ -9,10 +9,7 @@ const pulse = keyframes`
   100% { transform: scale(1); }
 `;
 
-const fadeIn = keyframes`
-  from { opacity: 0; }
-  to { opacity: 1; }
-`;
+
 
 // Styled components
 const HeroContainer = styled.section`
