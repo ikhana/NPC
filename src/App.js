@@ -93,35 +93,36 @@ function App() {
         backgroundColor="#007bff"
         textColor="#f9f9f9"
       />
-      <MovingStrip
-        sentences={[
-          "Dive into the world of NPC!",
-          "Earning while laughing, that's the NPC way!",
-        ]}
-        direction="left"
-        tilt={-1}
-        backgroundColor="#60afff"
-        textColor="#f9f9f9"
-      />
-      <MovingStrip
-        sentences={[
-          "Tokenomics? Just enjoy the meme magic!",
-          "NPC: Laugh hard, earn big!",
-        ]}
-        direction="right"
-        tilt={-2}
-        backgroundColor="#99914b"
-        textColor="#f9f9f9"
-      />
-      <ComicPanel
-        mediaType="video"
-        mediaSrc={npcVideo}
-        question="What's tokenomics anyway?"
-        answer="It's mentioned, lol. Don't you see? It's the essence of NPC!"
-        ctaText="EXPLORE TOKENOMICS"
-        backgroundColor="#007bff"
-        textColor="#f9f9f9"
-      />
+    <MovingStrip
+  sentences={[
+    "Ready to become an NPC millionaire?",
+    "Invest smart, laugh hard with NPC!",
+  ]}
+  direction="left"
+  tilt={-1}
+  backgroundColor="#60afff"
+  textColor="#f9f9f9"
+/>
+<MovingStrip
+  sentences={[
+    "What's the key to success?",
+    "Investing in NPC, obviously!",
+  ]}
+  direction="right"
+  tilt={-2}
+  backgroundColor="#99914b"
+  textColor="#f9f9f9"
+/>
+<ComicPanel
+  mediaType="video"
+  mediaSrc={npcVideo}
+  question="So, how do I start investing?"
+  answer="Just jump into the NPC pool, the water's fine!"
+  ctaText="TAKE THE NPC PLUNGE"
+  backgroundColor="#007bff"
+  textColor="#f9f9f9"
+/>
+
       <MovingStrip
         sentences={[
           "NPC: A journey of memes and dreams!",
