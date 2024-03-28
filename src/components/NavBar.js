@@ -5,6 +5,11 @@ import React, { useState } from 'react';
 
 import popupImage1 from '../assets/post1.jpg'; // Adjust with your path
 import popupImage2 from '../assets/post3.jpg'; // Adjust with your path
+import TwitterIcon from "../assets/Twitter.png";
+import SendIcon from "../assets/Send.png";
+import BarIcon from "../assets/baricon1.png";
+import RecIcon from "../assets/recticon.png";
+import UniIcon from "../assets/unicorn2.png";
 
 
 // Define our keyframes
@@ -26,13 +31,13 @@ const Popup = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #fff;
-  padding: 20px;
+  padding: 10px;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   z-index: 1000; // Make sure it's above other elements
   display: ${props => props.show ? 'block' : 'none'};
-  width: 80%; // Use a percentage width for responsiveness
-  max-width: 500px; // Ensure it doesn't get too large on wider screens
+  width: 60%; // Use a percentage width for responsiveness
+  max-width: 400px; // Ensure it doesn't get too large on wider screens
 
   @media (min-width: 768px) {
     padding: 40px; // More padding on larger screens
@@ -40,7 +45,7 @@ const Popup = styled.div`
 `;
 
 const PopupImage = styled.img`
-  width: 100%;
+  width:100%;
   height: auto; // Ensure the image scales correctly
 `;
 const Overlay = styled.div`
@@ -56,7 +61,7 @@ const Overlay = styled.div`
 
 
 const HeaderContainer = styled.header`
-  background-color: #60afff; // Primary color
+background-color: linear-gradient(to center, #007bff, #007bff 70%, #ffffff 110%);
   padding: 10px 5%; // Adjust padding and use percentage for horizontal padding
   display: flex;
   flex-direction: column; // Stack elements on smaller screens
@@ -107,32 +112,32 @@ const Tooltip = styled.span`
   }
 `;
 */
-const hoverEffect = keyframes`
-  0% { transform: scale(1); }
-  50% { transform: scale(1.1); }
-  100% { transform: scale(1); }
+
+// Define your keyframes for the hover effect
+const hoverGrow = keyframes`
+0% { transform: scale(1); }
+50% { transform: scale(1.1); }
+100% { transform: scale(1); }
 `;
 
 const Button = styled.button`
   background-color: #99914b; // Subdued Yellow
-  border: 2px solid #f9f9f9; // Off-White
-  border-radius: 25px;
+  border: none; // Remove the border for a flatter design
+  border-radius: 20px;
   color: #f9f9f9; // Off-White text color
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 6px 14px; // Set padding for the button
+  font-size: 14px; // Set a fixed font size for all screen sizes
   font-family: 'Press Start 2P', cursive;
   cursor: pointer;
-  margin: 0 10px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
+  margin: 8px; // Space between buttons
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2); // Subtle shadow for depth
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   &:hover {
-    animation: ${hoverEffect} 0.5s ease-in-out infinite;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+    animation: ${hoverGrow} 0.5s ease-in-out forwards;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); // Enhanced shadow on hover for depth
   }
 `;
-
-
 
 /*const ButtonWithTooltip = styled(Button)`
   position: relative;
@@ -149,13 +154,13 @@ const Button = styled.button`
 `;*/
 
 const Logo = styled.img`
-  height: 100px;
+  height: 150px;
   animation: ${rotate} 20s linear infinite, ${float} 6s ease-in-out infinite;
 `;
 
 const ResponsiveLogo = styled(Logo)`
   @media (max-width: 768px) {
-    height: 100px; // Smaller logos for tablet and mobile
+    height: 130px; // Smaller logos for tablet and mobile
   }
 
   
@@ -165,7 +170,7 @@ const HeaderTitle = styled.h1`
   font-family: 'Bangers', cursive;
   color: #f9f9f9;
   text-align: center;
-  width: 100%;
+  width: 50%;
   font-size: 2.5rem;
   margin: 20px 0;
 
@@ -178,69 +183,89 @@ const HeaderTitle = styled.h1`
   }
 `;
 
-const HumorSection = styled.div`
+
+
+
+const SocialIconsContainer = styled.div`
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  margin: 20px 0; // Add some margin on top and bottom for smaller screens
-
-  @media (min-width: 768px) {
-    flex-direction: row;
-    margin: 0; // Remove margin for wider screens
-  }
-`;
-const Joke = styled.p`
-  font-family: 'Roboto', sans-serif;
-  color: #f9f9f9;
-  margin: 10px 0;
 `;
 
+const IconLink = styled.a`
+  margin: 0 10px;
+`;
+
+const IconImage = styled.img`
+  width: 24px;
+  height: 24px;
+`;
+const PopupButton = styled(Button)`
+  margin-top: 15px; // Add some space above the buttons inside the popup
+  width: auto; // Let the button size be determined by its content
+`;
+
+const socialMediaLinks = [
+  { icon: BarIcon, link: "https://solscan.io/token/G3wqxasCS3cuNHsCifr8QfrkYaoPMQqCRQnwZyTmE6bs" },
+  { icon: RecIcon, link: "https://solscan.io/token/G3wqxasCS3cuNHsCifr8QfrkYaoPMQqCRQnwZyTmE6bs" },
+  { icon: UniIcon, link: "https://raydium.io/swap/" },
+  { icon: SendIcon, link: "https://t.me/Portaldonk" },
+  { icon: TwitterIcon, link: "https://twitter.com/XDonk_" },
+];
 
 
 
 
   
 const Header = () => {
-    const [popupImage, setPopupImage] = useState('');
     const [showPopup, setShowPopup] = useState(false);
+    const [popupImage, setPopupImage] = useState('');
   
+    // Function to handle opening the popup with the correct image
     const showFirstPopup = () => {
-      setPopupImage(popupImage1);
       setShowPopup(true);
+      setPopupImage(popupImage1);
     };
   
     const showSecondPopup = () => {
-      setPopupImage(popupImage2);
       setShowPopup(true);
+      setPopupImage(popupImage2);
     };
   
+    // Function to close the popup
     const closePopup = () => {
       setShowPopup(false);
+      setPopupImage('');
     };
-  
+
     return (
-      <>
-        <HeaderContainer>
-          <ResponsiveLogo src={logo} alt="Left Logo" />
-          <HumorSection>
-            <HeaderTitle>Meme Coin Madness!</HeaderTitle>
-            <Joke>Why did the token stay home? It was feeling a little crypto-sick!</Joke>
-            <Button onClick={showFirstPopup}>Show First Popup</Button>
-            <Button onClick={showSecondPopup}>Show Second Popup</Button>
-          </HumorSection>
-          <ResponsiveLogo src={logo} alt="Right Logo" />
-        </HeaderContainer>
-        {showPopup && (
-          <>
-            <Overlay show={showPopup} onClick={closePopup} />
-            <Popup show={showPopup}>
-              <PopupImage src={popupImage} alt="Popup" />
-            </Popup>
-          </>
-        )}
-      </>
+        <>
+            <HeaderContainer>
+                <ResponsiveLogo src={logo} alt="Logo" />
+                <SocialIconsContainer>
+                    {socialMediaLinks.map((link, index) => (
+                        <IconLink key={index} href={link.link} target="_blank">
+                            <IconImage src={link.icon} alt={`Social icon ${index}`} />
+                        </IconLink>
+                    ))}
+                </SocialIconsContainer>
+                <HeaderTitle>Meme Coin Madness!</HeaderTitle>
+                <Button onClick={showFirstPopup}>EHY ME !</Button>
+                <Button onClick={showSecondPopup}>EHY NO ME !</Button>
+                <ResponsiveLogo src={logo} alt="Logo" />
+            </HeaderContainer>
+            {showPopup && (
+        <>
+          <Overlay show={showPopup} onClick={closePopup} />
+          <Popup show={showPopup}>
+            <PopupImage src={popupImage} alt="Popup" />
+            <PopupButton onClick={() => window.open('https://raydium.io/swap/', '_blank')}>Buy NPC</PopupButton>
+            <PopupButton onClick={() => window.open('https://raydium.io/swap/', '_blank')}>Radium Link</PopupButton>
+          </Popup>
+        </>
+      )}
+        </>
     );
-  };
-  
-  export default Header;
-  
+};
+
+export default Header;
