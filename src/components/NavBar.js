@@ -155,12 +155,10 @@ const Logo = styled.img`
 
 const ResponsiveLogo = styled(Logo)`
   @media (max-width: 768px) {
-    height: 60px; // Smaller logos for tablet and mobile
+    height: 100px; // Smaller logos for tablet and mobile
   }
 
-  @media (max-width: 480px) {
-    display: none; // Hide logos on very small screens
-  }
+  
 `;
 
 const HeaderTitle = styled.h1`
