@@ -58,8 +58,8 @@ function App() {
         textColor="#f9f9f9"
       />
       <ComicPanel
-        mediaType="video"
-        mediaSrc={npcVideo}
+        mediaType="image"
+        mediaSrc={npcImage}
         question="Why is he poor?"
         answer="Because he didn't invest in NPC, lol maybe."
         ctaText="THEN I SHOULD INVEST TO BE RICH"
