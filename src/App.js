@@ -4,8 +4,10 @@ import NavBar from './components/NavBar';
 import HeroSection from './components/Hero/HeroSection';
 import MovingStrip from './components/MovingStrip';
 import ComicPanel from './components/ComicPanel';
-import npcImage from "../src/assets/post1.jpg";
 import npcVideo from "./assets/gif.mp4"
+import npc1Video from "./assets/npcdisc1.mp4"
+import npc2Video from "./assets/buynow.gif"
+import npctVideo from "./assets/Tokenomics.mp4"
 import Footer from './components/Footer';
 
 const AppContainer = styled.div`
@@ -59,11 +61,12 @@ function App() {
         textColor="#f9f9f9"
       />
       <ComicPanel
-        mediaType="image"
-        mediaSrc={npcImage}
+        mediaType="video"
+        mediaSrc={npcVideo}
         question="Why is he poor?"
         answer="Because he didn't invest in NPC, lol maybe."
         ctaText="THEN I SHOULD INVEST TO BE RICH"
+        ctaLink="https://t.me/NPCsPortal"
       />
       <MovingStrip
         sentences={[
@@ -87,12 +90,13 @@ function App() {
       />
    <ComicPanel
         mediaType="video"
-        mediaSrc={npcVideo}
+        mediaSrc={npc1Video}
         question="Ok, so what is NPC exactly?"
         answer="NPC is the Non-Playable Coin that plays a big role in your wealth!"
         ctaText="DISCOVER THE POWER OF NPC"
         backgroundColor="#007bff"
         textColor="#f9f9f9"
+        ctaLink="https://t.me/NPCsPortal"
       />
     <MovingStrip
   sentences={[
@@ -115,13 +119,14 @@ function App() {
   textColor="#f9f9f9"
 />
 <ComicPanel
-  mediaType="video"
-  mediaSrc={npcVideo}
+  mediaType="image"
+  mediaSrc={npc2Video}
   question="So, how do I start investing?"
   answer="Just jump into the NPC pool, the water's fine!"
   ctaText="TAKE THE NPC PLUNGE"
   backgroundColor="#007bff"
   textColor="#f9f9f9"
+  ctaLink="https://t.me/NPCsPortal"
 />
 
       <MovingStrip
@@ -146,12 +151,13 @@ function App() {
       />
          <ComicPanel
        mediaType="video"
-       mediaSrc={npcVideo} // Replace with the correct video path
+       mediaSrc={npctVideo} // Replace with the correct video path
         question="What's tokenomics anyway?"
         answer="It's mentioned, lol. Don't you see? It's the essence of NPC!"
         ctaText="EXPLORE TOKENOMICS"
         backgroundColor="#007bff"
         textColor="#f9f9f9"
+        ctaLink="https://t.me/NPCsPortal"
       />
     <Footer/>
     </AppContainer>

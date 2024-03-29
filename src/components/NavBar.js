@@ -7,9 +7,6 @@ import popupImage1 from '../assets/post1.jpg'; // Adjust with your path
 import popupImage2 from '../assets/post3.jpg'; // Adjust with your path
 import TwitterIcon from "../assets/Twitter.png";
 import SendIcon from "../assets/Send.png";
-import BarIcon from "../assets/baricon1.png";
-import RecIcon from "../assets/recticon.png";
-import UniIcon from "../assets/unicorn2.png";
 
 
 // Define our keyframes
@@ -197,8 +194,8 @@ const IconLink = styled.a`
 `;
 
 const IconImage = styled.img`
-  width: 24px;
-  height: 24px;
+  width: 40px;
+  height: 40px;
 `;
 const PopupButton = styled(Button)`
   margin-top: 15px; // Add some space above the buttons inside the popup
@@ -206,11 +203,8 @@ const PopupButton = styled(Button)`
 `;
 
 const socialMediaLinks = [
-  { icon: BarIcon, link: "https://solscan.io/token/G3wqxasCS3cuNHsCifr8QfrkYaoPMQqCRQnwZyTmE6bs" },
-  { icon: RecIcon, link: "https://solscan.io/token/G3wqxasCS3cuNHsCifr8QfrkYaoPMQqCRQnwZyTmE6bs" },
-  { icon: UniIcon, link: "https://raydium.io/swap/" },
-  { icon: SendIcon, link: "https://t.me/Portaldonk" },
-  { icon: TwitterIcon, link: "https://twitter.com/XDonk_" },
+  { icon: SendIcon, link: "https://t.me/NPCsPortal" },
+  { icon: TwitterIcon, link: "https://x.com/imnpcs" },
 ];
 
 
@@ -249,7 +243,7 @@ const Header = () => {
                         </IconLink>
                     ))}
                 </SocialIconsContainer>
-                <HeaderTitle>Meme Coin Madness!</HeaderTitle>
+                <HeaderTitle> Non-Playing Characters</HeaderTitle>
                 <Button onClick={showFirstPopup}>EHY ME !</Button>
                 <Button onClick={showSecondPopup}>EHY NO ME !</Button>
                 <ResponsiveLogo src={logo} alt="Logo" />
@@ -259,8 +253,8 @@ const Header = () => {
           <Overlay show={showPopup} onClick={closePopup} />
           <Popup show={showPopup}>
             <PopupImage src={popupImage} alt="Popup" />
-            <PopupButton onClick={() => window.open('https://raydium.io/swap/', '_blank')}>Buy NPC</PopupButton>
-            <PopupButton onClick={() => window.open('https://raydium.io/swap/', '_blank')}>Radium Link</PopupButton>
+            <PopupButton onClick={() => window.open('https://t.me/NPCsPortal', '_blank')}>Buy NPC</PopupButton>
+            <PopupButton onClick={() => window.open('https://x.com/imnpcs', '_blank')}>Radium Link</PopupButton>
           </Popup>
         </>
       )}

@@ -39,10 +39,10 @@ const Footer = () => {
     <FooterContainer>
       <FooterText>
         &copy; {new Date().getFullYear()} NPC Meme Coin. All rights reserved. |
-        <FooterLink href="https://www.twitter.com/npcmemecoin" target="_blank">
+        <FooterLink href="hhttps://x.com/imnpcs" target="_blank">
           <Icon src={TwitterIcon} alt="Twitter" /> Twitter
         </FooterLink>
-        <FooterLink href="https://t.me/npcmemecoin" target="_blank">
+        <FooterLink href="https://t.me/NPCsPortal" target="_blank">
           <Icon src={TelegramIcon} alt="Telegram" /> Telegram
         </FooterLink>
       </FooterText>

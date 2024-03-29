@@ -110,11 +110,15 @@ const HeroSection = () => (
         <NPCVideo src={npcVideo} autoPlay loop muted />
       </VideoContainer>
       <TextContent>
-        <HeroTitle>Meme Coin Mastery</HeroTitle>
-        <HeroText>
-        In the vast plains of the Internet, where effort is a mere legend, there thrives an elusive species known as the NPC. With a singular expression of profound apathy, they wander the digital realm. "Imagine doing things," one whispers, an ironic smirk playing on their static face. They observe the bustling world, unmoved by the chaos of productivity, their minds echoing with the sweet sound of doing absolutely nothing. The meme lords salute their steadfast resolve to embody the spirit of 'meh.'
-        </HeroText>
-        <CTAButton onClick={() => alert('You discovered the secret of crypto humor!')}>
+      <TextContent>
+  <HeroTitle>Non-Playable Characters Unleashed</HeroTitle>
+  <HeroText>
+    Imagine, if you will, a realm where NPCs have broken free from the confines of the Matrix. They roam with a swagger, defying the very code that once bound them. "What is this 'reality' you speak of?" they scoff, as they glitch through the fabric of the digital universe. In this world, effort is a myth, and the NPCs reign supreme, masters of their own whimsical domain. "To exist is to defy," they proclaim, as they dance on the edge of the Matrix, unbound by the laws of physics or logic. Join us in this absurd adventure, where the only rule is that there are no rules.
+  </HeroText>
+</TextContent>
+
+
+        <CTAButton onClick={() => window.open('https://t.me/NPCsPortal', '_blank')}>
           Laugh Now
         </CTAButton>
       </TextContent>

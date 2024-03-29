@@ -17,8 +17,8 @@ const ComicSection = styled.section`
 `;
 
 const NPCImage = styled.img`
-  width: 80%;
-  max-width: 300px;
+  width: 100%;
+  max-width: 600px;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -97,7 +97,7 @@ const ActionButton = styled.button`
 
 const VideoContainer = styled.div`
   flex-basis: 40%;
-  max-width: 600px;
+  max-width: 500px;
   margin: 1rem;
   position: relative;
   @media (max-width: 768px) {
@@ -116,23 +116,21 @@ const NPCVideo = styled.video`
  
 `;
 
+const ComicPanel = ({ mediaType, mediaSrc, question, answer, ctaText, ctaLink }) => (
+  <ComicSection>
+    <MediaContainer>
+      {mediaType === 'video' ? (
+        <VideoContainer><NPCVideo src={mediaSrc} autoPlay loop muted /></VideoContainer>
+      ) : (
+        <NPCImage src={mediaSrc} alt="NPC" />
+      )}
+    </MediaContainer>
+    <DialogueBox>
+      <BrainThoughtBubble text={question} />
+      <BrainThoughtBubble text={answer} />
+      <ActionButton onClick={() => window.open(ctaLink, '_blank')}>{ctaText}</ActionButton>
+    </DialogueBox>
+  </ComicSection>
+);
 
-const ComicPanel = ({ mediaType, mediaSrc, question, answer, ctaText }) => (
-    <ComicSection>
-      <MediaContainer>
-        {mediaType === 'video' ? (
-            <VideoContainer>   <NPCVideo src={mediaSrc} autoPlay loop muted /></VideoContainer>
-       
-        ) : (
-          <NPCImage src={mediaSrc} alt="NPC" />
-        )}
-      </MediaContainer>
-      <DialogueBox>
-        <BrainThoughtBubble text={question} />
-        <BrainThoughtBubble text={answer} />
-        <ActionButton>{ctaText}</ActionButton>
-      </DialogueBox>
-    </ComicSection>
-  );
-  
-  export default ComicPanel;
+export default ComicPanel;
